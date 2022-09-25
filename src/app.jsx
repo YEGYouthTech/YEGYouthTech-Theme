@@ -4,6 +4,7 @@ import { HeroTitle } from './components/HeroTitle'
 import { StarBG } from './components/StarBG'
 import { AnimationStateContext } from './context/animationState'
 import SmoothScroll from 'smoothscroll-for-websites'
+import React from 'react'
 
 export default function App() {
   const [animationState, setAnimationState] = React.useState(false)
@@ -64,7 +65,7 @@ export default function App() {
         />
         <HeroTitle />
       </div>
-      <div class="max-w-sm mx-auto">
+      <div className="max-w-sm mx-auto">
         {Array(40)
           .fill(null)
           .map(() => (

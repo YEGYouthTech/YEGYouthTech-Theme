@@ -14,7 +14,7 @@
     </div>
   </div> -->
 
-  <div id="app"></div>
+  <div id="root"></div>
 
   <!-- <div class="max-w-4xl mx-auto px-4">
     <div class="prose max-w-full">

@@ -21,7 +21,7 @@ export function HeroTitle() {
       </div>
       <div className="overflow-hidden">
         <h2
-          class="font-wsans font-bold text-[6vw] sm:text-[4.2vw] text-gray-100 text-center"
+          className="font-wsans font-bold text-[6vw] sm:text-[4.2vw] text-gray-100 text-center"
           style={{
             opacity: !animationState ? 0 : 1,
             transform: !animationState
