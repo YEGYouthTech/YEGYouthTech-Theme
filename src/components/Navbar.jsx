@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
     <nav className="fixed top-[2.5rem] right-[2.5rem] z-50 w-[14rem] bg-gradient-to-br from-emerald-400 to-sky-500 px-4 py-4 rounded-md">
-      {/* Logo */}
-
       <div className="flex flex-row items-center justify-between">
         <div>
           <a href="#">
             <img
               src="https://avatars.githubusercontent.com/u/113301687?s=200&v=4"
               alt="Logo"
-              className="rounded-md w-10"
+              className="rounded-md w-11"
             />
           </a>
         </div>
-
-        {/* Hamburger menu */}
 
         <div className="w-9 h-6 flex flex-col items-center justify-between cursor-pointer">
           {
@@ -32,10 +30,30 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Links */}
-
       <div>
-
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">CoT</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Opportunities</a>
+          </li>
+          <li>
+            <a href="#">Puzzle Week</a>
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

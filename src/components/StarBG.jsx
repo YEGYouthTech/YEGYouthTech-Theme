@@ -63,8 +63,8 @@ export const StarBG = (props) => {
       <div
         className="fixed inset-0 w-screen h-screen top-0"
         style={{
-          background:
-            'radial-gradient(circle at center, #001358 0%, #010e42 100%)',
+          background: '#0e0e0e',
+          //   'radial-gradient(circle at center, #001358 0%, #010e42 100%)',
           zIndex: -1,
         }}
       ></div>
