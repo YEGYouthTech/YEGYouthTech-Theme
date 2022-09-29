@@ -1,0 +1,42 @@
+import React from "react";
+
+export default function Navbar() {
+  return (
+    <nav className="fixed top-[2.5rem] right-[2.5rem] z-50 w-[14rem] bg-gradient-to-br from-emerald-400 to-sky-500 px-4 py-4 rounded-md">
+      {/* Logo */}
+
+      <div className="flex flex-row items-center justify-between">
+        <div>
+          <a href="#">
+            <img
+              src="https://avatars.githubusercontent.com/u/113301687?s=200&v=4"
+              alt="Logo"
+              className="rounded-md w-10"
+            />
+          </a>
+        </div>
+
+        {/* Hamburger menu */}
+
+        <div className="w-9 h-6 flex flex-col items-center justify-between cursor-pointer">
+          {
+            ["full", "3/4", "2/4"].map((n, index) => {
+              return (
+                <span
+                  key={index}
+                  className={`w-${n} h-[3px] bg-neutral-900/75 rounded-md ml-auto`}>
+                </span>
+              );
+            })
+          }
+        </div>
+      </div>
+
+      {/* Links */}
+
+      <div>
+
+      </div>
+    </nav>
+  );
+}

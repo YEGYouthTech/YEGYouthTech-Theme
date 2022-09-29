@@ -1,10 +1,10 @@
-import { useAnimationState } from '../context/animationState'
-import React from 'react'
-import Starback from 'starback'
+import { useAnimationState } from '../context/AnimationStateContext';
+import React from 'react';
+import Starback from 'starback';
 
 export const StarBG = (props) => {
-  const canvasRef = React.useRef(null)
-  const { animationState } = useAnimationState()
+  const canvasRef = React.useRef(null);
+  const { animationState } = useAnimationState();
 
   React.useEffect(() => {
     if (canvasRef.current) {
@@ -12,51 +12,51 @@ export const StarBG = (props) => {
         type: 'dot',
         quantity: 200,
         direction: 0,
-        backgroundColor: ['rgba(20,20,20,0)'],
+        backgroundColor: "#0e0e0e",
         // randomOpacity: [0, 0.3],
         width: window.innerWidth,
         height: window.innerHeight,
         starColor: ['#A448EA', '#9CB3F0', '#100F64'],
         speed: [0.4, 1],
         showfps: true,
-      })
-      console.log(starback)
+      });
+      console.log(starback);
       let lastpos =
-        document.documentElement.scrollTop || document.body.scrollTop
-      let lastTime = Date.now()
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let lastTime = Date.now();
       const onScroll = () => {
-        const now = Date.now()
-        const delta = now - lastTime
-        lastTime = now
+        const now = Date.now();
+        const delta = now - lastTime;
+        lastTime = now;
         const pos =
-          (document.documentElement.scrollTop || document.body.scrollTop) ?? 0
-        const deltaPos = pos - lastpos
+          (document.documentElement.scrollTop || document.body.scrollTop) ?? 0;
+        const deltaPos = pos - lastpos;
         const deltaPosAsPercent =
           (deltaPos * 8000) / document.documentElement.scrollHeight ||
-          document.body.scrollHeight
-        lastpos = pos
+          document.body.scrollHeight;
+        lastpos = pos;
         // console.log(deltaPosAsPercent);
         starback.setSpeedMultiplier(
           deltaPosAsPercent / delta < 1
             ? deltaPosAsPercent / delta
             : (deltaPosAsPercent * 5) / delta
-        )
-      }
+        );
+      };
       const to = setInterval(() => {
         // console.log(starback.speedMultiplier);
         if (starback.speedMultiplier < -0.2)
-          starback.speedMultiplier -= starback.speedMultiplier / 2
+          starback.speedMultiplier -= starback.speedMultiplier / 2;
         else if (starback.speedMultiplier > 1)
-          starback.speedMultiplier -= starback.speedMultiplier / 2
-        else if (starback.speedMultiplier < 1) starback.speedMultiplier = 1
-      }, 100)
-      window.addEventListener('scroll', onScroll)
+          starback.speedMultiplier -= starback.speedMultiplier / 2;
+        else if (starback.speedMultiplier < 1) starback.speedMultiplier = 1;
+      }, 100);
+      window.addEventListener('scroll', onScroll);
       return () => {
-        clearInterval(to)
-        window.removeEventListener('scroll', onScroll)
-      }
+        clearInterval(to);
+        window.removeEventListener('scroll', onScroll);
+      };
     }
-  }, [canvasRef.current])
+  }, [canvasRef.current]);
 
   return (
     <>
@@ -77,5 +77,5 @@ export const StarBG = (props) => {
         }}
       />
     </>
-  )
-}
+  );
+};

@@ -1,13 +1,14 @@
-import { useAnimationState } from '../context/animationState'
-import { ScrollIndicator } from './ScrollIndicator'
+import { useAnimationState } from '../context/AnimationStateContext';
+// import { ScrollIndicator } from './ScrollIndicator';
 
 export function HeroTitle() {
-  const { animationState } = useAnimationState()
+  const { animationState } = useAnimationState();
+
   return (
     <div className="absolute w-full h-full flex flex-col justify-center items-center">
       <div className="overflow-hidden">
         <h1
-          className="font-montserrat font-extrabold text-[12vw] sm:text-[12vw] bg-gradient-to-br from-blue-400 to-fuchsia-500 via-purple-400 bg-clip-text text-transparent drop-shadow-lg"
+          className="font-montserrat font-extrabold text-[13vw] sm:text-[11vw] bg-gradient-to-br from-emerald-400 to-sky-500 bg-clip-text text-transparent drop-shadow-2xl"
           style={{
             opacity: !animationState ? 0 : 1,
             transform: !animationState
@@ -21,7 +22,7 @@ export function HeroTitle() {
       </div>
       <div className="overflow-hidden">
         <h2
-          className="font-wsans font-bold text-[6vw] sm:text-[4.2vw] text-gray-100 text-center"
+          className="font-wsans font-bold text-[3.2vw] text-gray-100 text-center drop-shadow-2xl"
           style={{
             opacity: !animationState ? 0 : 1,
             transform: !animationState
@@ -33,7 +34,8 @@ export function HeroTitle() {
           Edmonton Youth Technology Organization
         </h2>
       </div>
-      <ScrollIndicator />
+      
+      {/* <ScrollIndicator /> */}
     </div>
-  )
+  );
 }
