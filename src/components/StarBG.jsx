@@ -12,8 +12,8 @@ export const StarBG = (props) => {
         type: 'dot',
         quantity: 200,
         direction: 0,
-        backgroundColor: "#0e0e0e",
-        // randomOpacity: [0, 0.3],
+        backgroundColor: "#171717",
+        // backgrounduColor: "#0e0e0e",
         width: window.innerWidth,
         height: window.innerHeight,
         starColor: ['#A448EA', '#9CB3F0', '#100F64'],
@@ -63,8 +63,8 @@ export const StarBG = (props) => {
       <div
         className="fixed inset-0 w-screen h-screen top-0"
         style={{
-          background: '#0e0e0e',
-          //   'radial-gradient(circle at center, #001358 0%, #010e42 100%)',
+          background: '#171717',
+          // background: '#0e0e0e',
           zIndex: -1,
         }}
       ></div>

@@ -1,5 +1,5 @@
 import { useAnimationState } from '../context/AnimationStateContext';
-// import { ScrollIndicator } from './ScrollIndicator';
+import { ScrollIndicator } from './ScrollIndicator';
 
 export function HeroTitle() {
   const { animationState } = useAnimationState();
@@ -35,7 +35,7 @@ export function HeroTitle() {
         </h2>
       </div>
       
-      {/* <ScrollIndicator /> */}
+      <ScrollIndicator />
     </div>
   );
 }

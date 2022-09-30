@@ -18,9 +18,9 @@ export function ScrollIndicator() {
         className={`bg-gray rounded-full p-2 flex flex-row gap-2 animate-bounce-mini`}
       >
         <div className={`p-1 rounded-full shadow-lg`}>
-          <ChevronDownIcon className={`text-sky-400 w-4 h-4`} />
+          <ChevronDownIcon className={`text-gray-200 w-4 h-4`} />
         </div>
-        <span className={`text-sky-400 pr-2`}>Scroll Down</span>
+        <span className={`text-gray-200 pr-2`}>Scroll Down</span>
       </div>
     </div>
   );
