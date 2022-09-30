@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
-import { useAnimationState } from '../context/AnimationStateContext'
+import React, { useState } from 'react';
+import { useAnimationState } from '../context/AnimationStateContext';
 
 export default function Navbar() {
-  const [isClicked, setIsClicked] = useState(false)
-  const { animationState } = useAnimationState()
+  const [isClicked, setIsClicked] = useState(false);
+  const { animationState } = useAnimationState();
+
+  const pageLinks = ["Home", "CoT", "About", "Projects", "Opportunities", "Puzzle Week"];
+
+  function handleMenuClick() {
+    setIsClicked((prev) => !prev);
+  }
 
   return (
     <nav
@@ -16,8 +22,6 @@ export default function Navbar() {
         transition: `opacity 500ms ease-in-out 1800ms, transform 500ms ease-in-out 1800ms`,
       }}
     >
-      {/* Logo */}
-
       <div className="flex flex-row items-center justify-between">
         <div>
           <a href="#">
@@ -29,43 +33,41 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="w-9 h-6 flex flex-col items-center justify-between cursor-pointer">
+        <div className="w-9 h-6 flex flex-col items-center justify-between cursor-pointer" onClick={handleMenuClick}>
           {['full', '3/4', '2/4'].map((n, index) => {
             return (
               <span
                 key={index}
-                className={`w-${n} h-[3px] bg-neutral-900/75 rounded-md ml-auto`}
+                className={`w-${n} h-[3px] bg-gray-900 rounded-md ml-auto`}
               ></span>
-            )
+            );
           })}
         </div>
       </div>
 
-      <div>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">CoT</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Opportunities</a>
-          </li>
-          <li>
-            <a href="#">Puzzle Week</a>
-          </li>
-          <li>
-            <a href="#">Home</a>
-          </li>
-        </ul>
-      </div>
+      {isClicked &&
+        <div className="mt-3 text-center">
+          <ul>
+            {
+              pageLinks.map((link, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={index > 0 && index < pageLinks.length - 1 ? "my-2" : "m-0"}
+                  >
+                    <a
+                      href="#"
+                      className="text-base"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      }
     </nav>
-  )
+  );
 }
