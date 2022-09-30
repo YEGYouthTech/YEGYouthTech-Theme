@@ -34,14 +34,9 @@ export default function Navbar() {
         </div>
 
         <div className="w-9 h-6 flex flex-col items-center justify-between cursor-pointer" onClick={handleMenuClick}>
-          {['full', '3/4', '2/4'].map((n, index) => {
-            return (
-              <span
-                key={index}
-                className={`w-${n} h-[3px] bg-gray-900 rounded-md ml-auto`}
-              ></span>
-            );
-          })}
+          <span className="w-full h-[3px] bg-gray-900 rounded-md ml-auto" />
+          <span className="w-3/4 h-[3px] bg-gray-900 rounded-md ml-auto" />
+          <span className="w-2/4 h-[3px] bg-gray-900 rounded-md ml-auto" />
         </div>
       </div>
 
