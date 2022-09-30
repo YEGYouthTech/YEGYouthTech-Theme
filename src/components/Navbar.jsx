@@ -43,26 +43,18 @@ export default function Navbar() {
       {isClicked &&
         <div className="mt-3 text-center">
           <ul>
-            {
-              pageLinks.map((link, index) => {
-                return (
-                  <li
-                    key={index}
-                    className={index > 0 && index < pageLinks.length - 1 ? "my-2" : "m-0"}
-                  >
-                    <a
-                      href="#"
-                      className="text-base"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                );
-              })
-            }
+            {pageLinks.map((link, index) => {
+              return (
+                <li
+                  key={index}
+                  className={index > 0 && index < pageLinks.length - 1 ? "my-2" : "m-0"}
+                >
+                  <a href="#" className="text-base">{link}</a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       }
-    </nav>
-  );
+    </nav>);
 }
