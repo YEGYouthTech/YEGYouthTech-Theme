@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    animation: bounce 5s infinite;
+}
+
+// .parallax-container {
+
+//     .title,
+//     .description {
+//         z-index: 0;
+//         text-align: center;
+//         max-width: 90%;
+//     }
+
+//     .title,
+//     span {
+//         line-height: 9rem;
+//     }
+
+//     .title {
+//         font-weight: 700;
+//         font-size: 9rem;
+//         animation: bounce 5s infinite;
+//         background: -webkit-linear-gradient(#34d399, #0ea5e9);
+//         -webkit-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+
+//         span {
+//             display: inline-block;
+//         }
+//     }
+
+//     .description {
+//         margin-top: 6rem;
+//         font-weight: 600;
+//         font-size: 2.5rem;
+//     }
+// }
+
+// @media (max-width: 1024px) {
+//     .parallax-container {
+//         .scene {
+//             filter: brightness(40%);
+//         }
+
+//         .title,
+//         span {
+//             line-height: 7.5rem;
+//         }
+
+//         .title {
+//             font-size: 8rem;
+
+//             span {
+//                 display: block;
+//             }
+//         }
+
+//         .description {
+//             margin-top: 4rem;
+//             line-height: 3.3rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .parallax-container {
+//         .scene {
+//             filter: brightness(40%);
+//         }
+
+//         .title,
+//         span {
+//             line-height: 6rem;
+//         }
+
+//         .title {
+//             font-size: 6.6rem;
+
+//             span {
+//                 display: block;
+//             }
+//         }
+
+//         .description {
+//             line-height: 2.8rem;
+//             font-size: 2.1rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 600px) {
+//     .parallax-container {
+//         .scene {
+//             filter: brightness(40%);
+//         }
+
+//         .title,
+//         span {
+//             line-height: 4rem;
+//         }
+
+//         .title {
+//             font-size: 4.2rem;
+
+//             span {
+//                 display: block;
+//             }
+//         }
+
+//         .description {
+//             line-height: 2.8rem;
+//             font-size: 1.8rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 375px) {
+//     .parallax-container {
+//         .scene {
+//             filter: brightness(40%);
+//         }
+
+//         .title,
+//         span {
+//             line-height: 4rem;
+//         }
+
+//         .title {
+//             font-size: 3.6rem;
+
+//             span {
+//                 display: block;
+//             }
+//         }
+
+//         .description {
+//             line-height: 2.8rem;
+//             font-size: 1.8rem;
+//         }
+//     }
+// }

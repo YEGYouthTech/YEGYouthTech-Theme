@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isClicked, setIsClicked] = useState(false);
   const { animationState } = useAnimationState();
 
-  const pageLinks = ["Home", "CoT", "About", "Projects", "Opportunities", "Puzzle Week"];
+  const pageLinks = [{ "Home": "#" }, { "CoT": "#cot" }, { "About": "#about" }, { "Projects": "#projects" }, { "Opportunities": "#opportunities" }, { "Puzzle Week": "#puzzle-week" }];
 
   function handleMenuClick() {
     setIsClicked((prev) => !prev);
@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-[2.5rem] right-[2.5rem] z-50 w-[14rem] bg-neutral-900 px-4 py-4 rounded-md border border-neutral-800"
+      className="fixed top-[2.5rem] tn:inset-x-0 tn:mx-auto md:left-auto md:translate-x-0 md:right-[2.5rem] z-50 w-[14rem] bg-neutral-900 px-4 py-4 rounded-md border border-neutral-800"
       style={{
         opacity: !animationState ? 0 : 1,
         transform: !animationState
@@ -43,13 +43,20 @@ export default function Navbar() {
       {isClicked &&
         <div className="mt-4 text-center">
           <ul>
-            {pageLinks.map((link, index) => {
+            {pageLinks.map((links, index) => {
+              const data = [];
+
+              for (let i in links) {
+                data.push(i);
+                data.push(links[i])
+              }
+
               return (
                 <li
                   key={index}
                   className={index > 0 && index < pageLinks.length - 1 ? "my-2" : "m-0"}
                 >
-                  <a href="#" className="text-lg text-gray-100/75 transition-colors duration-200 ease-in-out hover:text-gray-100">{link}</a>
+                  <a href={data[1]} className="text-lg text-gray-100/75 transition-colors duration-200 ease-in-out hover:text-gray-100">{data[0]}</a>
                 </li>
               );
             })}

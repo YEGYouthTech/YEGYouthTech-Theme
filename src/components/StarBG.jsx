@@ -13,7 +13,6 @@ export const StarBG = (props) => {
         quantity: 200,
         direction: 0,
         backgroundColor: "#171717",
-        // backgrounduColor: "#0e0e0e",
         width: window.innerWidth,
         height: window.innerHeight,
         starColor: ['#A448EA', '#9CB3F0', '#100F64'],

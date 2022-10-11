@@ -55,21 +55,21 @@ export default function App() {
           image="https://i.imgur.com/NE6Sqs2.png"
           parallaxModifier={40}
           animationDelay={0.4}
-          brightness={70}
+          brightness={60}
         />
         <EdmontonLayer
           // image="https://media.discordapp.net/attachments/746177266471534695/1011395732424634439/output1.png"
           image="https://i.imgur.com/NiNYv7m.png"
           parallaxModifier={20}
           animationDelay={0.2}
-          brightness={60}
+          brightness={50}
         />
         <EdmontonLayer
           // image="https://media.discordapp.net/attachments/746177266471534695/1011395732017791007/output0.png"
           image="https://i.imgur.com/cxTWGEZ.png"
           parallaxModifier={0}
           animationDelay={0}
-          brightness={80}
+          brightness={70}
         />
         <HeroTitle />
       </div>

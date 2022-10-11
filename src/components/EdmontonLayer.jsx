@@ -23,7 +23,7 @@ export default function EdmontonLayer(props) {
     <img
       src={image}
       alt="Edmonton skyline"
-      className="absolute w-full h-full object-cover object-left-bottom"
+      className="scene absolute w-full h-full object-cover object-left-bottom"
       style={{
         filter: `brightness(${brightness}%)`,
         transition: `bottom 0.5s ease-out ${animationDelay}s, opacity 0.5s ease-out ${animationDelay}s`,

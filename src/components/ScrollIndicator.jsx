@@ -5,7 +5,8 @@ export function ScrollIndicator() {
   const { animationState } = useAnimationState();
   return (
     <div
-      className={`absolute bottom-0 p-12`}
+      // className="absolute bottom-0 p-12 animate-bounce"
+      className="absolute bottom-0 pb-5"
       style={{
         opacity: !animationState ? 0 : 0.87,
         transform: !animationState
